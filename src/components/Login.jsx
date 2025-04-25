@@ -16,9 +16,9 @@ const Login = ({ handleLogin }) => {
     <>
       <div className="h-screen flex items-center justify-center bg-[url(https://img.freepik.com/free-vector/gradient-technological-background_23-2148884155.jpg]">
         <div className="border-cyan-700 border-2 shadow-lg inset-shadow-3xl rounded-md p-10 py-18 backdrop-blur-3xl">
-          {/*<div className="flex items-center justify-center text-2xl text-white">
+          <div className="flex items-center justify-center text-2xl text-white">
             Login
-          </div> */}
+          </div>
           <form onSubmit={submitHandler}>
             <div className="flex items-center justify-center">
               <input
