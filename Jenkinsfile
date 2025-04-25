@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/Harshit1103/react-docker.git'
+                git branch: 'master', url: 'https://github.com/Harshit1103/react-docker.git'
             }
         }
 
