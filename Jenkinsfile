@@ -1,12 +1,12 @@
 pipeline {
     agent any
 
-    stage('Clone') {
-    steps {
-        git branch: 'main', url: 'https://github.com/Harshit1103/react-docker.git'
-    }
-}
-
+    stages {
+        stage('Clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Harshit1103/react-docker.git'
+            }
+        }
 
         stage('Install Dependencies') {
             steps {
