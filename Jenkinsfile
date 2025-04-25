@@ -28,8 +28,12 @@ pipeline {
 
         stage('Docker Run') {
             steps {
-                bat 'docker stop my-react-app || echo No container'
-                bat 'docker rm my-react-app || echo No container'
+                bat '''
+    docker stop my-react-app || echo "No container to stop"
+    docker rm my-react-app || echo "No container to remove"
+'''
+
+                
                 bat 'docker run -d -p 8080:80 --name my-react-app my-react-app'
             }
         }
