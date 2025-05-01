@@ -38,8 +38,8 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'DOCKER_HUB', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                     bat 'docker login -u %DOCKER_USER% -p %DOCKER_PASS%'
-                    bat 'docker tag weather-app %DOCKER_USER%/weather-app:latest'
-                    bat 'docker push %DOCKER_USER%/weather-app:latest'
+                    bat 'docker tag react-docker %DOCKER_USER%/react-docker:latest'
+                    bat 'docker push %DOCKER_USER%/react-docker:latest'
                 }
             }
         }
